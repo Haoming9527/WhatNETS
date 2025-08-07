@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# NETS x WhatsApp Integration Prototype
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a prototype developed for the PolyFinTech100 API Hackathon 2025, where we proposed a strategic collaboration between NETS and WhatsApp. The objective was to increase adoption and usage of NETS among youth by integrating NETS payment functionality directly into a familiar messaging platform, WhatsApp. The prototype demonstrates how this integration could provide a seamless and convenient way for users to make payments during their conversations.
+
+The interface is built to simulate WhatsApp. Within the chat interface, users will find a "NETS" button. When clicked, this button redirects them to a second page where they can input the amount they wish to pay. Upon submitting the amount, it will generates a QR code based on the entered amount. This QR code can be scanned by the payer using the NETS Payment Simulator App to complete the transaction.
+
+This prototype is not an official integration of NETS or WhatsApp, and is built solely for educational and demonstration purposes. It was personally developed as part of the hackathon submission to illustrate the core idea and technical feasibility of the proposed solution.
 
 ## Available Scripts
 
