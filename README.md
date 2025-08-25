@@ -1,74 +1,215 @@
-# NETS x WhatsApp Integration Prototype
+# WhatNETS - NETS x WhatsApp Integration Prototype
 
-This project is a prototype developed for the PolyFinTech100 API Hackathon 2025, where we proposed a strategic collaboration between NETS and WhatsApp. The objective was to increase adoption and usage of NETS among youth by integrating NETS payment functionality directly into a familiar messaging platform, WhatsApp. The prototype demonstrates how this integration could provide a seamless and convenient way for users to make payments during their conversations.
+[![React](https://img.shields.io/badge/React-18.3.1-blue.svg)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-Latest-green.svg)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Hackathon](https://img.shields.io/badge/Hackathon-PolyFinTech100%202025-orange.svg)]()
 
-The interface is built to simulate WhatsApp. Within the chat interface, users will find a "NETS" button. When clicked, this button redirects them to a second page where they can input the amount they wish to pay. Upon submitting the amount, it will generates a QR code based on the entered amount. This QR code can be scanned by the payer using the NETS Payment Simulator App to complete the transaction.
+A prototype demonstrating the integration of NETS payment functionality within WhatsApp's messaging interface. This project was developed for the **PolyFinTech100 API Hackathon 2025** to showcase how seamless payment experiences can be embedded into familiar messaging platforms.
 
-This prototype is not an official integration of NETS or WhatsApp, and is built solely for educational and demonstration purposes. It was personally developed as part of the hackathon submission to illustrate the core idea and technical feasibility of the proposed solution.
+## 🎯 Project Overview
 
-## Available Scripts
+WhatNETS proposes a strategic collaboration between NETS and WhatsApp to increase adoption and usage of NETS among youth. The prototype demonstrates how payment functionality can be seamlessly integrated into a familiar messaging platform, providing users with a convenient way to make payments during their conversations.
 
-In the project directory, you can run:
+### Key Features
 
-### `npm start`
+- **WhatsApp-like Interface**: Authentic messaging platform simulation
+- **NETS Payment Integration**: QR code generation for payment processing
+- **Real-time Transaction Status**: Success/failure status tracking
+- **Responsive Design**: Mobile-first approach with modern UI/UX
+- **Secure Payment Flow**: End-to-end payment simulation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Quick Start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js (v14 or higher)
+- npm or yarn package manager
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd WhatNETS
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
 
-### `npm run eject`
+## 📱 How It Works
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### User Flow
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **WhatsApp Interface**: Users interact with a familiar WhatsApp-like chat interface
+2. **NETS Button**: Click the NETS button in the navigation to initiate payment
+3. **Amount Input**: Enter the payment amount on the payment page
+4. **QR Code Generation**: System generates a QR code based on the entered amount
+5. **Payment Processing**: Scan the QR code using the NETS Payment Simulator App
+6. **Status Confirmation**: View transaction success or failure status
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Demo Walkthrough
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Start at the home page with the WhatsApp interface
+2. Click the NETS icon in the top navigation
+3. Enter a payment amount (e.g., $10.00)
+4. Generate and scan the QR code
+5. View the transaction status page
 
-## Learn More
+## 🛠️ Technology Stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Frontend Framework**: React 18.3.1
+- **Routing**: React Router DOM 6.23.1
+- **UI Components**: Material-UI 5.15.20
+- **Icons**: Font Awesome 6.7.2, React Icons 5.5.0
+- **HTTP Client**: Axios 1.7.2
+- **Cryptography**: js-sha256 0.11.0
+- **Styling**: CSS3 with custom components
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📁 Project Structure
 
-### Code Splitting
+```
+WhatNETS/
+├── public/                 # Static assets
+│   ├── index.html         # Main HTML template
+│   └── WhatsApp.ico       # App icon
+├── src/
+│   ├── assets/            # Images and static files
+│   │   ├── NETSPay.png
+│   │   ├── WhatsApp.png
+│   │   └── ...
+│   ├── netsQr/            # NETS QR functionality
+│   │   └── views/
+│   │       ├── HomePage.jsx
+│   │       └── netsQrSamplePage.jsx
+│   ├── txnNetsStatus/     # Transaction status pages
+│   │   └── views/
+│   │       ├── txnNetsSuccessStatusPage.jsx
+│   │       └── txnNetsFailStatusPage.jsx
+│   ├── App.js             # Main application component
+│   ├── config.js          # Configuration settings
+│   └── index.js           # Application entry point
+├── package.json           # Dependencies and scripts
+└── README.md             # Project documentation
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🎨 Features
 
-### Analyzing the Bundle Size
+### WhatsApp Interface Simulation
+- Authentic chat interface with contact list
+- Realistic message bubbles and timestamps
+- Search functionality and navigation icons
+- Desktop notification prompts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### NETS Payment Integration
+- QR code generation based on payment amount
+- Secure payment flow simulation
+- Integration with NETS Payment Simulator App
+- Real-time transaction status updates
 
-### Making a Progressive Web App
+### User Experience
+- Intuitive navigation between chat and payment
+- Responsive design for mobile and desktop
+- Loading states and progress indicators
+- Clear success/failure feedback
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🚀 Available Scripts
 
-### Advanced Configuration
+| Command | Description |
+|---------|-------------|
+| `npm start` | Runs the app in development mode |
+| `npm test` | Launches the test runner |
+| `npm run build` | Builds the app for production |
+| `npm run eject` | Ejects from Create React App |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Development
 
-### Deployment
+```bash
+npm start
+```
+- Opens [http://localhost:3000](http://localhost:3000)
+- Hot reloading enabled
+- Console displays lint errors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Production Build
 
-### `npm run build` fails to minify
+```bash
+npm run build
+```
+- Creates optimized production build
+- Minified and hashed filenames
+- Ready for deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🔧 Configuration
+
+The application uses environment variables for configuration. Create a `.env` file in the root directory:
+
+```env
+REACT_APP_API_URL=your_api_endpoint
+REACT_APP_NETS_ENDPOINT=your_nets_endpoint
+```
+
+## 📱 Mobile Responsiveness
+
+The application is designed with a mobile-first approach and includes:
+- Responsive breakpoints for different screen sizes
+- Touch-friendly interface elements
+- Optimized layouts for mobile devices
+- Progressive Web App capabilities
+
+## 🔒 Security Considerations
+
+- This is a prototype for demonstration purposes
+- No real financial transactions are processed
+- QR codes are generated for simulation only
+- All payment data is mock data
+
+## 🤝 Contributing
+
+This project was developed as part of the PolyFinTech100 API Hackathon 2025. For contributions or questions:
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## ⚠️ Disclaimer
+
+**This is a prototype developed for educational and demonstration purposes only.**
+
+- Not an official integration of NETS or WhatsApp
+- No real financial transactions are processed
+- Built solely for the PolyFinTech100 API Hackathon 2025
+- Demonstrates technical feasibility and user experience concepts
+
+## 🙏 Acknowledgments
+
+- **PolyFinTech100 API Hackathon 2025** for the opportunity
+- **NETS** for providing the payment infrastructure
+- **WhatsApp** for the messaging platform inspiration
+- **React Community** for the excellent development tools
+
+## 📞 Support
+
+For questions or support regarding this prototype:
+- Create an issue in the repository
+- Contact the development team
+- Refer to the hackathon documentation
+
+---
+
+**Built with ❤️ for the PolyFinTech100 API Hackathon 2025**

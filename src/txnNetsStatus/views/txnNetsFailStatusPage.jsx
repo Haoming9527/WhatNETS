@@ -1,4 +1,5 @@
 import React from "react";
+
 import TxnNetsFailStatusLayout from "./txnNetsFailStatusLayout";
 
 const TxnNetsFailStatusPage = () => {

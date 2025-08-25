@@ -1,4 +1,5 @@
 import React from "react";
+
 import TxnNetsSuccessStatusLayout from "./txnNetsSuccessStatusLayout";
 
 const TxnNetsSuccessStatusPage = () => {

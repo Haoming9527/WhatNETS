@@ -1,21 +1,31 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
+import React from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import "./App.css"; // Default global stylesheet
 
-//Nets sample
-// TODO 6: Import React Components
-import ENetsSamplePage from "./eNets/views/eNetsSampleLayout";
-import TxnNetsSuccessStatusPage from "./txnNetsStatus/views/txnNetsSuccessStatusLayout";
-import TxnNetsFailStatusPage from "./txnNetsStatus/views/txnNetsFailStatusLayout";
+
+// Import React components
+import HomePage from "./netsQr/views/HomePage";
+import NetsQrSamplePage from "./netsQr/views/netsQrSamplePage";
+import TxnNetsSuccessStatusPage from "./txnNetsStatus/views/txnNetsSuccessStatusPage";
+import TxnNetsFailStatusPage from "./txnNetsStatus/views/txnNetsFailStatusPage";
+
 const App = () => {
   return (
+    <BrowserRouter>
+      <Main />
+    </BrowserRouter>
+  );
+};
+
+const Main = () => {
+  return (
     <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/enets" element={<ENetsSamplePage />} />
-          <Route path="/enets/success" element={<TxnNetsSuccessStatusPage />} />
-          <Route path="/enets/fail" element={<TxnNetsFailStatusPage />} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/nets-qr" element={<NetsQrSamplePage />} />
+        <Route path="/nets-qr/success" element={<TxnNetsSuccessStatusPage />} />
+        <Route path="/nets-qr/fail" element={<TxnNetsFailStatusPage />} />
+      </Routes>
     </div>
   );
 };
