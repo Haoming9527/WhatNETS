@@ -1,7 +1,8 @@
 {
-  "name": "netsqr_sample_prerequisites",
+  "name": "whatnets",
   "version": "0.1.0",
   "private": true,
+  "description": "NETS x WhatsApp Integration Prototype for PolyFinTech100 API Hackathon 2025",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
